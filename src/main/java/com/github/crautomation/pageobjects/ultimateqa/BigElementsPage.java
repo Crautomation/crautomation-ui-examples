@@ -1,4 +1,4 @@
-package com.github.crautomation.pageobjects.ultilmateqa;
+package com.github.crautomation.pageobjects.ultimateqa;
 
 import com.github.crautomation.core.ui.test.BasePageObject;
 import io.qameta.allure.Step;

@@ -5,14 +5,13 @@
 
     <groupId>com.github.crautomation</groupId>
     <artifactId>crautomation-ui-examples</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>crautomation-ui-examples</name>
     <description>
-        Crautomation-UI-Examples
-        Example Framework for UI Testing utilising
-        Crautomation-Core
+        Example UI Testing examples
+        utilising the Crautomation-Core framework
     </description>
-    <url>https://github.com/Frameworkium/frameworkium-core</url>
+    <url>https://github.com/Crautomation/crautomation-ui-examples</url>
     <inceptionYear>2018</inceptionYear>
 
     <properties>
@@ -23,7 +22,7 @@
         <groups />
 
         <!-- Dependency Versions -->
-        <crautomation.core.version>1.0.0</crautomation.core.version>
+        <crautomation.core.version>1.0.1</crautomation.core.version>
         <hamcrest.all.version>1.3</hamcrest.all.version>
         <hamcrest.java.version>2.0.0.0</hamcrest.java.version>
         <slf4j.version>1.7.25</slf4j.version>
@@ -130,6 +129,9 @@
                             <parallel>methods</parallel>
                             <threadCount>${threads}</threadCount>
                             <testFailureIgnore>false</testFailureIgnore>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
                             <argLine>
                                 -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                             </argLine>

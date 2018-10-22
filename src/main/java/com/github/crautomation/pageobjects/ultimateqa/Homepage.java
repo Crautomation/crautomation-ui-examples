@@ -1,4 +1,4 @@
-package com.github.crautomation.pageobjects.ultilmateqa;
+package com.github.crautomation.pageobjects.ultimateqa;
 
 import com.github.crautomation.core.ui.test.BasePageObject;
 import io.qameta.allure.Step;
@@ -22,6 +22,9 @@ public class Homepage extends BasePageObject<Homepage>
     @FindBy(linkText = "Big page with many elements")
     private WebElement bigPageLink;
 
+    @FindBy(linkText = "Fill out forms")
+    private WebElement fillingOutFormsLink;
+
     public Homepage(final WebDriver driver)
     {
         super(driver);
@@ -44,10 +47,19 @@ public class Homepage extends BasePageObject<Homepage>
         assertThat("Homepage has not loaded.", logoImage.isDisplayed(), is(true));
     }
 
+    @Step("Navigating to the 'Big Elements' page")
     public BigElementsPage openBigElementsPage()
     {
         bigPageLink.click();
 
         return new BigElementsPage(driver);
+    }
+
+    @Step("Navigating to the 'Filling Out Forms' page")
+    public FillingOutForms openFillingOutFormsPage()
+    {
+        fillingOutFormsLink.click();
+
+        return new FillingOutForms(driver);
     }
 }
