@@ -24,7 +24,7 @@ public class UltimateQATestPass extends BaseUITestCase
     {
         log.info("Starting UltimateQATestPass...");
 
-        final BigElementsPage bigElementsPage = new Homepage(getDriver())
+        final BigElementsPage bigElementsPage = new Homepage()
                 .open().then().openBigElementsPage();
 
         assertThat("Button was not located with Sizzle", bigElementsPage.canButtonBeFoundWithSizzle(),

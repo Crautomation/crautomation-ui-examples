@@ -2,7 +2,6 @@ package com.github.crautomation.pageobjects.ultimateqa;
 
 import com.github.crautomation.core.ui.test.BasePageObject;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 /**
@@ -12,9 +11,8 @@ import org.openqa.selenium.WebElement;
  */
 public class BigElementsPage extends BasePageObject<BigElementsPage>
 {
-    BigElementsPage(final WebDriver driver)
+    BigElementsPage()
     {
-        super(driver);
         initElements();
     }
 

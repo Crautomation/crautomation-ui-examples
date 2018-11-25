@@ -40,7 +40,7 @@ public class UltimateQATestDataDriven extends BaseUITestCase
     {
         log.info("Starting " + testName);
 
-        final FillingOutForms fillingOutForms = new Homepage(getDriver())
+        final FillingOutForms fillingOutForms = new Homepage()
                 .open().then().openFillingOutFormsPage();
 
         fillingOutForms.enterContactName(name).and().enterContactMessage(password)

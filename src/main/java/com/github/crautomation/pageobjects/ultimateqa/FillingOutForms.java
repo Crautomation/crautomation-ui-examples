@@ -2,7 +2,6 @@ package com.github.crautomation.pageobjects.ultimateqa;
 
 import com.github.crautomation.core.ui.test.BasePageObject;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -22,9 +21,8 @@ public class FillingOutForms extends BasePageObject<FillingOutForms>
     @FindBy(css = "button[class='et_pb_contact_submit et_pb_button']")
     private WebElement submitButton;
 
-    FillingOutForms(final WebDriver driver)
+    FillingOutForms()
     {
-        super(driver);
         initElements();
     }
 

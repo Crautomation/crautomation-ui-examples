@@ -25,7 +25,7 @@ public class UltimateQATestFail extends BaseUITestCase
     {
         log.info("Starting UltimateQATestFail...");
 
-        final BigElementsPage bigElementsPage = new Homepage(getDriver())
+        final BigElementsPage bigElementsPage = new Homepage()
                 .open().then().openBigElementsPage();
 
         assertThat("Button was not located with Sizzle", bigElementsPage.canButtonBeFoundWithSizzle(),

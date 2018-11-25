@@ -2,7 +2,6 @@ package com.github.crautomation.pageobjects.ultimateqa;
 
 import com.github.crautomation.core.ui.test.BasePageObject;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -25,9 +24,8 @@ public class Homepage extends BasePageObject<Homepage>
     @FindBy(linkText = "Fill out forms")
     private WebElement fillingOutFormsLink;
 
-    public Homepage(final WebDriver driver)
+    public Homepage()
     {
-        super(driver);
         initElements();
     }
 
@@ -52,7 +50,7 @@ public class Homepage extends BasePageObject<Homepage>
     {
         bigPageLink.click();
 
-        return new BigElementsPage(driver);
+        return new BigElementsPage();
     }
 
     @Step("Navigating to the 'Filling Out Forms' page")
@@ -60,6 +58,6 @@ public class Homepage extends BasePageObject<Homepage>
     {
         fillingOutFormsLink.click();
 
-        return new FillingOutForms(driver);
+        return new FillingOutForms();
     }
 }
