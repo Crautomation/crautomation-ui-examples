@@ -17,7 +17,7 @@
     <properties>
         <!-- General CustomResources -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>8</java.version>
+        <java.version>11</java.version>
         <threads>1</threads>
         <groups />
 
@@ -29,10 +29,10 @@
 
         <!-- Build Versions -->
         <maven.compiler.version>3.8.0</maven.compiler.version>
-        <maven.surefire.version>2.22.0</maven.surefire.version>
+        <maven.surefire.version>3.0.0</maven.surefire.version>
         <allure.maven.version>2.12.0</allure.maven.version>
         <allure.testng.version>2.22.0</allure.testng.version>
-        <aspectj.version>1.9.1</aspectj.version>
+        <aspectj.version>1.9.19</aspectj.version>
     </properties>
 
     <dependencies>
