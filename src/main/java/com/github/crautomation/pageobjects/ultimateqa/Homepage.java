@@ -5,6 +5,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -15,9 +16,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 public class Homepage extends BasePageObject<Homepage>
 {
-    @FindBy(css = "img[id=logo]")
-    private WebElement logoImage;
-
     @FindBy(linkText = "Big page with many elements")
     private WebElement bigPageLink;
 
@@ -42,7 +40,7 @@ public class Homepage extends BasePageObject<Homepage>
     @Step("Validating Homepage has loaded")
     private void hasPageLoaded()
     {
-        assertThat("Homepage has not loaded.", logoImage.isDisplayed(), is(true));
+        assertThat("Homepage has not loaded.", driver.getTitle(), equalTo("Automation Practice - Ultimate QA"));
     }
 
     @Step("Navigating to the 'Big Elements' page")
