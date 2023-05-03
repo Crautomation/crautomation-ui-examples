@@ -30,6 +30,7 @@ tmp/
 .gradle
 .java-version
 *nbproject*
+ajcore.*
 
 # Eclipse specific
 .project
